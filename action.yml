@@ -1,0 +1,29 @@
+# action.yml
+name: 'Send Gmail'
+description: 'Sends mail with Gmail service'
+inputs:
+  gmail_username:
+    description: "Gmail username"
+    required: true
+  gmail_password:
+    description: "Gmail password"
+    required: true
+  recipient:
+    description: "recipient"
+    required: true
+  subject:
+    description: "subject"
+    required: true
+  body:
+    description: "body"
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    USERNAME: $gmail_username
+    PASSWORD: $gmail_password
+    RECIPIENT: $recipient
+    SUBJECT: $subject
+    BODY: $body
+
