@@ -18,12 +18,18 @@ inputs:
     description: "body"
     required: true
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  env:
-    USERNAME: $username
-    PASSWORD: $password
-    RECIPIENT: $recipient
-    SUBJECT: $subject
-    BODY: $body
-
+  using: 'composite'
+  steps:
+    - name: Install Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - name: Send Email
+      shell: bash
+      env:
+        USERNAME: $username
+        PASSWORD: $password
+        RECIPIENT: $recipient
+        SUBJECT: $subject
+        BODY: $body
+      run: python send_gmail.py
