@@ -21,9 +21,9 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
-    USERNAME: $username
-    PASSWORD: $password
-    RECIPIENT: $recipient
-    SUBJECT: $subject
-    BODY: $body
+    USERNAME: "$username"
+    PASSWORD: "$password"
+    RECIPIENT: "$recipient"
+    SUBJECT: "$subject"
+    BODY: "$body"
 
