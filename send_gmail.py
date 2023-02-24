@@ -5,6 +5,8 @@ import smtplib
 def send_email(
         user: str, pwd: str, recipient: [str | list[str]], subject: str, body: str
 ) -> None:
+    print(f"user: {user}")
+    print(f"pwd: {pwd}")
 
     from_ = user
     to = recipient if isinstance(recipient, list) else [recipient]
