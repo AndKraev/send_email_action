@@ -2,10 +2,10 @@
 name: 'Send Gmail'
 description: 'Sends mail with Gmail service'
 inputs:
-  gmail_username:
+  username:
     description: "Gmail username"
     required: true
-  gmail_password:
+  password:
     description: "Gmail password"
     required: true
   recipient:
@@ -21,8 +21,8 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
-    USERNAME: $gmail_username
-    PASSWORD: $gmail_password
+    USERNAME: $username
+    PASSWORD: $password
     RECIPIENT: $recipient
     SUBJECT: $subject
     BODY: $body
