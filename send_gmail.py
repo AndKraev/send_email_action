@@ -28,9 +28,9 @@ def send_email(
 
 if __name__ == "__main__":
     send_email(
-        user=os.getenv("INPUT_USERNAME"),
-        pwd=os.getenv("INPUT_PASSWORD"),
-        recipient=os.getenv("INPUT_RECIPIENT"),
-        subject=os.getenv("INPUT_SUBJECT"),
-        body=os.getenv("INPUT_BODY")
+        user=os.getenv("USERNAME"),
+        pwd=os.getenv("PASSWORD"),
+        recipient=os.getenv("RECIPIENT"),
+        subject=os.getenv("SUBJECT"),
+        body=os.getenv("BODY")
     )

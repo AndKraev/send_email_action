@@ -24,6 +24,12 @@ runs:
       with:
         python-version: '3.11' # install the python version needed
     - shell: bash
+      env:
+        USERNAME: $username
+        PASSWORD: $password
+        RECIPIENT: $recipient
+        SUBJECT: $subject
+        BODY: $body
       run: python ${{ github.action_path }}/send_gmail.py
 
 
