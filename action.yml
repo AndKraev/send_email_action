@@ -24,6 +24,5 @@ runs:
       shell: bash
       run: |
         pwd
-        ls ..
-        ls ...
+        ls /home/runner/work/
 
