@@ -25,7 +25,7 @@ runs:
         python-version: '3.11' # install the python version needed
     - shell: bash
       env:
-        USERNAME: ${{ inputs.username$ }}
+        USERNAME: ${{ inputs.username }}
         PASSWORD: ${{ inputs.password }}
         RECIPIENT: ${{ inputs.recipient }}
         SUBJECT: ${{ inputs.subject }}
