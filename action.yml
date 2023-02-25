@@ -20,9 +20,10 @@ inputs:
 runs:
   using: "composite"
   steps:
-    -
-      shell: bash
-      run: |
-        pwd
-        ls ${{ github.action_path }}
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.11' # install the python version needed
+    - shell: bash
+      run: python ${{ github.action_path }}/send_gmail.py
+
 
