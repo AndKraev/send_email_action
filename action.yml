@@ -24,9 +24,6 @@ runs:
       shell: bash
       run: |
         pwd
-        ls -l
-    -
-      shell: bash
-      run: |
-        ls
+        ls ..
+        ls ...
 
